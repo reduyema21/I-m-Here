@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DoctorListActivity">
+    <!-- Toolbar at the top -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:title="Home"
+        android:titleTextColor="@android:color/white"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    <!-- Scrollable content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Header TextView -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textStyle="bold"
+                android:textSize="24sp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BOOK APPOINTMENT"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:paddingEnd="16dp"/>
+            <!-- Doctor List Header -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Doctor List"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textCursorDrawable="@color/green"
+                android:layout_marginStart="45dp"
+                android:textColor="@color/Magenta"
+                />
+            <!-- RecyclerView for Doctor List -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/doctorRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="List of doctors"
+                android:padding="8dp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
